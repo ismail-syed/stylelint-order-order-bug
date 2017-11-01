@@ -1,0 +1,23 @@
+.Puzzle--idAccessible {
+  cursor: get-cursor(rock);
+
+  .Face {
+    animation-duration: get-duration(slower);
+    animation-timing-function: get-easing();
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+  }
+
+  $start: 0ms;
+  $delay: get-duration(fast);
+
+  @for $i from 1 through 6 {
+    .Cube:nth-child(#{$i}) {
+      .Face {
+        animation-delay: $start;
+      }
+    }
+
+    $start: $start + $delay;
+  }
+}

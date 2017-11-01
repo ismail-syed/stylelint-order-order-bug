@@ -1,0 +1,24 @@
+{
+  "name": "prettier-styelint-test-curtis",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "stylelint": "stylelint './*.scss'",
+    "stylelint:fix": "stylelint './*.scss' --fix"
+  },
+  "devDependencies": {
+    "stylelint": "^8.2.0",
+    "stylelint-config-shopify": "^3.0.0-beta.4"
+  },
+  "stylelint": {
+    "extends": [
+      "stylelint-config-shopify"
+    ],
+    "rules": {
+      "selector-class-pattern": null,
+      "selector-max-class": 4,
+      "selector-max-combinators": 3
+    }
+  }
+}
